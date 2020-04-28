@@ -7,13 +7,29 @@ make it through to the good ending?
 ### Functionality & MVP
 
 
-users will be able to:
+Players will be able to:
 
-[ ] Follow along a story
-[ ] Type their answers to progress
-[ ] choose their character name
+* Choose their character name
+* Type their answers to progress
+* Make choices by choosing story branch 
+
+### Technologies
+
+* Javascript
+* HTML
+* CSS
+
 
 ## Timeline
 
+* Day 1 : create intro page, develop story
+
+![Intro](https://felixgroupmern.s3.amazonaws.com/intro.png)
+
+* Day 2 : create main chat page, add story, create end screen 
+
+![MainChat](https://felixgroupmern.s3.amazonaws.com/mainchat.png)
+
+* Day 3 : add avatar images, css styling
 
 
