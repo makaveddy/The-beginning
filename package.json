@@ -1,0 +1,48 @@
+{
+  "name": "js-project",
+  "version": "1.0.0",
+  "description": "This is an interactive story of the beginning of a love story. As you read through the story there are breakpoints where you can choose where the story goes. Can you  make it through to the good ending?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "webpack:watch": "webpack --watch --config webpack.dev.js",
+    "webpack:build": "webpack --config webpack.prod.js  --optimize-minimize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makaveddy/The-beginning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makaveddy/The-beginning/issues"
+  },
+  "homepage": "https://github.com/makaveddy/The-beginning#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "fibers": "^5.0.0",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}

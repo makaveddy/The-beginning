@@ -1,0 +1,21 @@
+body {
+  background-color: gray;
+  
+};
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  box-sizing: border-box;
+  border: solid black 1px;
+  width: 200px;
+  justify-content: center;
+  display: flex;
+}
+
+.container button {
+
+}
