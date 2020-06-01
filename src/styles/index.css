@@ -19,3 +19,11 @@ body {
 .container button {
 
 }
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: default;
+}
