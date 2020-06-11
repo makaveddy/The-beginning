@@ -33,7 +33,7 @@ function startConvo (){
                         containerJenna.innerHTML = `
     <div class="box">
     <p>${StoryScript.intro3.text}</p>
-        ${generateBtns(StoryScript.intro3.next)}
+        ${generateBtns(StoryScript.jenna0.next)}
     </div>
     
     `;

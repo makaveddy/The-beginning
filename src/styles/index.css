@@ -1,4 +1,6 @@
-body {
+@import "./reset.css";
+
+/* body {
   background-color: gray;
   
 };
@@ -26,4 +28,49 @@ body {
 
 .visible {
   display: default;
+} */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-container {
+  text-align: center;
+}
+
+.main-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: cornflowerblue;
+  width: 300px;
+  height: 300px;
+}
+
+.chat-1 {
+  display: flex;
+  justify-content: space-around;
+  background-color: darkgoldenrod;
+}
+
+.avatar-1 {
+  width: 200px;
+  height: 200px;
+  background-color: darkmagenta;
+  margin: 50px;
+}
+
+.chatbox-1 {
+  width: 500px;
+  height: 150px;
+  background-color: forestgreen;
+  margin: 50px;
+}
+
+.chat-windows {
+  display: none;
 }
