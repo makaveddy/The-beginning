@@ -39,6 +39,7 @@ body {
 
 .main-container {
   text-align: center;
+  /* display: none; */
 }
 
 .main-box {
@@ -70,7 +71,30 @@ body {
   background-color: forestgreen;
   margin: 50px;
 }
+.chat-2 {
+  display: flex;
+  justify-content: space-around;
+  background-color: darkgoldenrod;
+}
+
+.avatar-2 {
+  width: 200px;
+  height: 200px;
+  background-color: darkmagenta;
+  margin: 50px;
+}
+
+.chatbox-2 {
+  width: 500px;
+  height: 150px;
+  background-color: forestgreen;
+  margin: 50px;
+}
 
 .chat-windows {
+  /* display: none; */
+}
+
+.hidden {
   display: none;
 }

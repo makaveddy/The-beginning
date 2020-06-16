@@ -36,7 +36,7 @@ const storyScript = {
     john3: {
     character: "John",
         text: "Ok see you.",
-        next: "" //restart goes here
+        next: null
     },
     john4: {
     character: "John",
