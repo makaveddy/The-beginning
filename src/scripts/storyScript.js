@@ -18,7 +18,7 @@ const textNodes = [
         text: 'Should be leaving my place in about an hour. See you there.',
         options: [
             {
-                text: 'restart',
+                text: 'Restart',
                 nextText: -1
             }
         ]
@@ -76,7 +76,7 @@ const textNodes = [
         text: 'Yess!! Ill be ready in an hour cant wait!!',
         options: [
             {
-                text: 'Congrats!. You sealed the date! Play again?',
+                text: 'Congrats! You sealed the date! Play again?',
                 nextText: -1
             }
         ]
@@ -94,44 +94,3 @@ const textNodes = [
 ]
 export default textNodes
 
-
-
-//     John
-// Yea most def.What time you gonna head out ?
-
-//     Jenna
-// Should be leaving my place in about an hour.
-
-//     John
-// Perfect timing.I’ll see you there.
-
-//     Jenna
-// Can I ask you something ?
-
-//     John
-// Yea whats up ?
-
-//     Jenna
-// Do you ever think about that kiss ?
-
-//     John
-// 1. Yea.All the time
-// 2. What kiss ?
-
-//     Jenna
-// 1. Why did you wait so long ? I thought you didn’t like me.
-// 2. Never mind I’ll see you at the party.
-
-//     John
-// I was scared to be honest.Didn’t want to lose you as a friend.
-
-//     Jenna
-// You wouldn’t have lost me.Thats sweet of you though.
-
-//     John
-// 1. Want me to pick you up for the party ?
-// 2. I’ll see you at the party
-
-// Jenna
-// 1. Ok sure!
-// 2. Oh umm yea ok see you then.
