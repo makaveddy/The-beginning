@@ -1,120 +1,98 @@
-const storyScript = {
-    jenna0: {
-        character: "Jenna",
-        text: "Hey! You going to the party tonight?",
-        next: "john0"
+const textNodes = [
+    {
+        id: 1,
+        text: 'Hey! You going to the party tonight?',
+        options: [
+            {
+                text: 'Yea most def. What time are you gonna head out?',
+                nextText: 2
+            },
+            {
+                text: 'Yea most def just hate going to these things alone.',
+                nextText: 3
+            }
+        ]
     },
-    john0: {
-        character: "John",
-        text: "Yea most def.",
-        next: {
-            option1: "john1",
-            option2: "john2"
-        }
+    {
+        id: 2,
+        text: 'Should be leaving my place in about an hour. See you there.',
+        options: [
+            {
+                text: 'restart',
+                nextText: -1
+            }
+        ]
     },
-    john1: {
-        character: "John",
-        text: "What time you gonna head out?",
-        next: "jenna1"
+    {
+        id: 3,
+        text: 'Aww yea I know the feeling. Can I ask you something? you ever think of that kiss?',
+        options: [
+            {
+                text: 'Yea. All the time.',
+                nextText: 4
+            },
+            {
+                text: 'what kiss?',
+                nextText: 5
+            }
+        ]
     },
-    john2: {
-        character: "John",
-        text: "hate going to these things alone.",
-        next: "jenna2"
-            
+    {
+        id: 4,
+        text: 'Why did you wait so long? I thought you did not like me.',
+        options: [
+            {
+                text: 'I was scared to be honest. Did not want to lose you as a friend.',
+                nextText: 6
+            }
+        ]
     },
-    jenna1: {
-    character: "Jenna",
-        text: "Should be leaving my place in about an hour. See you there.",
-        next: "john3"
+    {
+        id: 5,
+        text: 'Nevermind. Ill see you at the party.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
     },
-    jenna2: {
-    character: "Jenna",
-        text: "aww yea I know the feeling. Can I ask you something? You ever think of that kiss?",
-        next: "john4"
+    {
+        id: 6,
+        text: 'You would not have lost me. That is sweet of you though.',
+        options: [
+            {
+                text: 'Want me to pick you up for the party?',
+                nextText: 7
+            },
+            {
+                text: 'Ill see you at the party.',
+                nextText: 8
+            }
+        ]
     },
-    john3: {
-    character: "John",
-        text: "Ok see you.",
-        next: null
+    {
+        id: 7,
+        text: 'Yess!! Ill be ready in an hour cant wait!!',
+        options: [
+            {
+                text: 'Congrats!. You sealed the date! Play again?',
+                nextText: -1
+            }
+        ]
     },
-    john4: {
-    character: "John",
-        text: "...",
-        next: {
-            option1: "john5",
-            option2: "jonh6"
-        }
-    },
-    john5: {
-    character: "John",
-        text: "Yea. All the time.",
-        next: "jenna3"
-    },
-    john6: {
-    character: "John",
-        text: "What kiss?",
-        next: "jenna4"
-    },
-    jenna3: {
-    character: "Jenna",
-        text: "Why did you wait so long? I thought you didn't like me.",
-        next: "john7"
-    },
-    jenna4: {
-    character: "Jenna",
-        text: "Never mind. I'll see you at the party.",
-        next: "" //restart goes here.
-    },
-    john7: {
-    character: "John",
-        text: "I was idk umm",
-        next: {
-            option1: "john8",
-            option2: "john9"
-        }
-    },
-    john8: {
-    character: "John",
-        text: "I was scared to be honest. Didn't want to lose you as a friend.",
-        next: "jenna5"
-    },
-    john9: {
-    character: "John",
-        text: "nevermind I'll just see you at the party.",
-        next: "" //restart goes here
-    },
-    jenna5: {
-    character: "Jenna",
-        text: "You wouldnt have lost me. That is sweet of you though.",
-        next: "john10"
-    },
-    john10: {
-    character: "John",
-        text: ":-)",
-        next: {
-            option1: "john11",
-            option2: "john12"
-        }
-    },
-    john11: {
-    character: "John",
-        text: "Want me to pick you up for the party?",
-        next: "jenna6"
-    },
-    john12: {
-    character: "John",
-        text: "I'll see you at the party.",
-        next: "" // restart goes here
-    },
-    jenna6: {
-    character: "Jenna",
-        text: "Yess!! I'll be ready in an hour cant wait!!",
-        next: "" //game over
+    {
+        id: 8,
+        text: 'Oh ok then. See ya.',
+        options: [
+            {
+                text: 'Restart',
+                nextText: -1
+            }
+        ]
     }
-}
-
-export default storyScript
+]
+export default textNodes
 
 
 

@@ -1,5 +1,5 @@
 
-import StoryScript from './scripts/storyScript';
+import textNodes from './scripts/storyScript';
 
 window.addEventListener("DOMContentLoaded", setupGame);
 let jennaChat;
@@ -20,57 +20,37 @@ function setupGame (){
 }
 
 function startConvo (){
-    const containerJenna = document.querySelector("#jenna-container");
-    const containerJohn = document.querySelector("#john-container");
     const chatWindows = document.querySelector(".chat-windows");
     chatWindows.classList.remove('hidden');
+    showTextNode(1)
 
-    jennaChat.innerHTML = `
-        <p>${StoryScript.jenna0.text}</p>
-        
-    `;
-    johnChat.innerHTML = `
-        <button class="reply">reply</button>
-    `;
-    const replyBtn = document.querySelector(".reply");
-    replyBtn.onclick = (e) => {
-        e.preventDefault();
-        johnChat.innerHTML = `
-        <p>${StoryScript.john0.text}</p>
-        `;
-        johnChat.append(...(generateBtns(StoryScript.john0.next)));
+
+}
+
+function showTextNode(textNodeIndex) {
+    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+    jennaChat.innerText = textNode.text
+    while (johnChat.firstChild) {
+        johnChat.removeChild(johnChat.firstChild)
     }
 
+    textNode.options.forEach(option => {
+        const button = document.createElement('button')
+        button.innerText = option.text
+        button.classList.add('btn')
+        button.addEventListener('click', () => selectOption(option))
+        johnChat.appendChild(button)
 
+    })
 }
 
-function generateBtns(nextOptions){
-    let optionBtns = [];
-    for (let option in nextOptions){
-        const choice = StoryScript[nextOptions[option]];
-        const choiceBtn = document.createElement("button");
-        choiceBtn.classList.add(`btn-${option}`);
-        choiceBtn.innerText = choice.text;
-        choiceBtn.onclick = handleChoice(choice.next)
-        optionBtns.push(choiceBtn);
-
+function selectOption(option) {
+    const nextTextNodeId = option.nextText
+    if (nextTextNodeId <= 0) {
+        return startConvo()
     }
-    return optionBtns
+    showTextNode(nextTextNodeId)
 }
 
-function handleChoice(nextChoice){
-    return function handleChoiceClick (e){
-    e.preventDefault();
-    if (nextChoice === null) {
-        restartGame()
-    }else{
-    let personText = StoryScript[nextChoice].text;
-    jennaChat.innerHTML = `
-        <p>${personText}</p>
-    `}
-    }
-}
 
-function restartGame(){
-    console.log("restart!")
-}
+
