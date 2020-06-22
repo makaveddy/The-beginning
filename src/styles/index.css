@@ -37,9 +37,14 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  font-size: 30px;
+}
+
 .main-container {
   text-align: center;
-  /* display: none; */
+  font-family: cursive;
+  
 }
 
 .main-box {
@@ -47,9 +52,22 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   width: 300px;
   height: 300px;
+  font-size: 20px;
+}
+
+#startBtn {
+  font-family: cursive;
+  background: none;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#startBtn:hover {
+  border-color: white;
 }
 
 .chat-1 {
@@ -68,8 +86,9 @@ body {
 .chatbox-1 {
   width: 500px;
   height: 150px;
-  background-color: forestgreen;
+  background-color: whitesmoke;
   margin: 50px;
+  border-radius: 5px;
 }
 .chat-2 {
   display: flex;
