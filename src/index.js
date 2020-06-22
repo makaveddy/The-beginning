@@ -1,49 +1,56 @@
 
-import StoryScript from './scripts/storyScript'
+import textNodes from './scripts/storyScript';
 
 window.addEventListener("DOMContentLoaded", setupGame);
+let jennaChat;
+let johnChat;
 
 function setupGame (){
     const startButton = document.querySelector("#startBtn");
+    jennaChat = document.querySelector(".chatbox-1");
+    johnChat = document.querySelector(".chatbox-2");
     startButton.onclick = (e) => {
         e.preventDefault();
-        const container = document.querySelector(".container");
+        const container = document.querySelector(".main-container");
         container.innerHTML = "";
-        // container.classList.add('hidden');
+        container.classList.add('hidden');
         startConvo();
       
     }
 }
 
 function startConvo (){
-                        // const containerJenna = document.querySelector(".convo-container-Jenna");
-                        // const containerJohn = document.querySelector(".convo-container-John");
-                        // containerJenna.classList.remove('hidden')
-                        // containerJohn.classList.remove('hidden')
+    const chatWindows = document.querySelector(".chat-windows");
+    chatWindows.classList.remove('hidden');
+    showTextNode(1)
 
-                        const containerJenna = document.createElement("div");
-                        // const boxDivJenna = document.createElement("div");
-                        // boxDivJenna.classList.add('box')
-                        // const paragraphJenna = document.createElement("p")
-                        // paragraphJenna.innerText = StoryScript.intro0.text
-                        // boxDivJenna.appendChild(paragraphJenna);
-                        // containerJenna.appendChild(boxDivJenna);
-                        // document.body.appendChild(containerJenna);
 
-                        containerJenna.innerHTML = `
-    <div class="box">
-    <p>${StoryScript.intro3.text}</p>
-        ${generateBtns(StoryScript.intro3.next)}
-    </div>
-    
-    `;
-                        document.body.appendChild(containerJenna);
 }
 
-function generateBtns(nextOptions){
-    let optionBtns = "";
-    for (let option in nextOptions){
-        optionBtns += (`<button class="btn-${option}">${nextOptions[option]}<button>`)
+function showTextNode(textNodeIndex) {
+    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+    jennaChat.innerText = textNode.text
+    while (johnChat.firstChild) {
+        johnChat.removeChild(johnChat.firstChild)
     }
-    return optionBtns
+
+    textNode.options.forEach(option => {
+        const button = document.createElement('button')
+        button.innerText = option.text
+        button.classList.add('btn')
+        button.addEventListener('click', () => selectOption(option))
+        johnChat.appendChild(button)
+
+    })
 }
+
+function selectOption(option) {
+    const nextTextNodeId = option.nextText
+    if (nextTextNodeId <= 0) {
+        return startConvo()
+    }
+    showTextNode(nextTextNodeId)
+}
+
+
+
