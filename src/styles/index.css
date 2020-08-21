@@ -15,6 +15,14 @@ header {
   font-size:36px;
 }
 
+i.fa {
+  font-size:36px;
+}
+
+.port {
+  font-size: 26px;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -83,6 +91,7 @@ h1 {
   background-color: lightgray;
   margin: 50px;
   border-radius: 5px;
+  padding: 20px;
 }
 .chat-2 {
   display: flex;
